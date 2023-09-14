@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>PAGE 1</title>
+  </head>
+  <body>
+    <nav id="menu">
+      <input
+        type="checkbox"
+        id="responsive-menu"
+        onclick="updatemenu()"
+      /><label></label>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page2.html">Event</a></li>
+      </ul>
+    </nav>
+    <table>
+      <tr>
+        <td>
+          <img id="img_1" src="1.jpg" />
+        </td>
+        <td>
+          <img id="img_2" src="2.jpg" />
+        </td>
+        <td>
+          <img id="img_3" src="3.jpg" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="btn" onclick="changeImage('img_1', '4.jpg')">
+            Change
+          </button>
+        </td>
+        <td>
+          <button class="btn" onclick="changeImage('img_2', '5.jpg')">
+            Change
+          </button>
+        </td>
+        <td>
+          <button class="btn" onclick="changeImage('img_3', '6.jpg')">
+            Change
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <video id="vid_1" controls autoplay>
+            <source src="https://player.vimeo.com/external/552426308.sd.mp4?s=19c1c7673fbac4979ebab837d0f65bec42a7cb95&profile_id=165&oauth2_token_id=57447761" type="video/mp4">
+          </video>
+        </td>
+        <td>
+          <video id="vid_2" controls autoplay>
+            <source src="https://player.vimeo.com/external/488497847.sd.mp4?s=f64befc971c6d82285985e5a7a2d027d5a4af9ae&profile_id=165&oauth2_token_id=57447761" type="video/mp4">
+          </video>
+        </td>
+        <td>
+          <video id="vid_3" controls autoplay>
+            <source src="https://player.vimeo.com/external/520472256.sd.mp4?s=204497e02e2fea631e43e3ae4082aaf079a9100b&profile_id=165&oauth2_token_id=57447761" type="video/mp4">
+          </video>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="btn" onclick="changeVideo('vid_1', 'https://player.vimeo.com/external/558628662.hd.mp4?s=d5b6d98eb7bfcfdc0c74439150ec6c69689d27e6&profile_id=174&oauth2_token_id=57447761')">
+            Change
+          </button>
+        </td>
+        <td>
+          <button class="btn" onclick="changeVideo('vid_2', 'https://player.vimeo.com/external/520472198.sd.mp4?s=161e3ec3932411856b3a5260f6dbfd12c2c446d4&profile_id=165&oauth2_token_id=57447761')">
+            Change
+          </button>
+        </td>
+        <td>
+          <button class="btn" onclick="changeVideo('vid_3', 'https://player.vimeo.com/external/563344720.hd.mp4?s=8252615f0794e279792df203d622f9739dbdf17f&profile_id=174&oauth2_token_id=57447761')">
+            Change
+          </button>
+        </td>
+      </tr>
+    </table>
+
+    <script>
+      function changeImage(imageId, newSrc) {
+        var image = document.getElementById(imageId);
+        if (image) {
+          image.src = newSrc;
+        }
+      }
+
+      function changeVideo(videoId, newSrc) {
+        var video = document.getElementById(videoId);
+        if (video) {
+          video.src = newSrc;
+        }
+      }
+    </script>
+  </body>
+</html>

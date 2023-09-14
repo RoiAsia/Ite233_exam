@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Event</title>
+</head>
+<body>
+    <nav id="menu">
+        <input
+          type="checkbox"
+          id="responsive-menu"
+          onclick="updatemenu()"
+        /><label></label>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="page2.html">Event</a></li>
+        </ul>
+      </nav>
+    <div class="container">
+        <div class="box" id="clickBox">Click Me</div>
+        <input type="text" class="box" id="blurInput" placeholder="Blur Event">
+        <select class="box" id="changeSelect">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+        <div class="box" id="doubleClickBox">Double Click Me</div>
+        <input type="text" class="box" id="focusInInput" placeholder="Focus In Event">
+        <input type="text" class="box" id="focusOutInput" placeholder="Focus Out Event">
+        <div class="box" id="mouseOverBox">Mouse Over Me</div>
+        <div class="box" id="resizeBox">Resize Me</div>
+        <div class="box animate" id="animationBox">Animation</div>
+    </div>
+
+    <script>
+        const clickBox = document.getElementById('clickBox');
+        const blurInput = document.getElementById('blurInput');
+        const changeSelect = document.getElementById('changeSelect');
+        const doubleClickBox = document.getElementById('doubleClickBox');
+        const focusInInput = document.getElementById('focusInInput');
+        const focusOutInput = document.getElementById('focusOutInput');
+        const mouseOverBox = document.getElementById('mouseOverBox');
+        const resizeBox = document.getElementById('resizeBox');
+        const animationBox = document.getElementById('animationBox');
+
+        clickBox.addEventListener('click', () => alert('Click Event'));
+        blurInput.addEventListener('blur', () => alert('Blur Event'));
+        changeSelect.addEventListener('change', () => alert('Change Event'));
+        doubleClickBox.addEventListener('dblclick', () => alert('Double Click Event'));
+        focusInInput.addEventListener('focusin', () => alert('Focus In Event'));
+        focusOutInput.addEventListener('focusout', () => alert('Focus Out Event'));
+        mouseOverBox.addEventListener('mouseover', () => alert('Mouse Over Event'));
+        window.addEventListener('resize', () => alert('Resize Event'));
+        animationBox.addEventListener('animationstart', () => alert('Animation Start Event'));
+        animationBox.addEventListener('animationend', () => alert('Animation End Event'));
+    </script>
+</body>
+</html>
